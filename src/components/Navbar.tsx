@@ -35,6 +35,7 @@ const GlowWrapper = ({ children }: { children: React.ReactNode }) => (
   </div>
 )
 
+
 export default function Offer() {
   return (
     <section
