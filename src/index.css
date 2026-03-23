@@ -1,0 +1,155 @@
+/* Google Fonts — Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* AOS — deve vir antes dos @tailwind */
+@import "aos/dist/aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #faf7f0;
+    color: #1a1a1a;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .section-tag {
+    @apply text-xs tracking-widest2 uppercase text-gold;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .btn-primary {
+    @apply relative inline-block px-10 py-4 bg-gold text-cream text-sm tracking-widest2 uppercase
+    transition-all duration-300 hover:bg-gold-dark hover:tracking-widest3;
+  }
+
+  .btn-outline {
+    @apply relative inline-block px-10 py-4 border border-gold text-gold text-sm tracking-widest2 uppercase
+    transition-all duration-300 hover:bg-gold hover:text-cream;
+  }
+}
+
+/* Grain texture overlay */
+.grain::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+}
+
+/* Scroll indicator animation */
+@keyframes scrollDown {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(8px); opacity: 0; }
+}
+
+.scroll-dot {
+  animation: scrollDown 1.6s ease-in-out infinite;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marquee 18s linear infinite;
+  white-space: nowrap;
+}
+
+/* Subtle pulse for CTA */
+@keyframes subtlePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(201,168,76,0); }
+}
+
+.cta-pulse {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+/* Gold shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #c9a84c 0%,
+    #f0d890 30%,
+    #c9a84c 50%,
+    #f0d890 70%,
+    #c9a84c 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Divider ornament */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c9a84c);
+}
+.ornament::after {
+  background: linear-gradient(to left, transparent, #c9a84c);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* Number highlight */
+.num-circle {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #c9a84c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a84c;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
