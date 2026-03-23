@@ -2,7 +2,7 @@ import imgCleane from "../assets/foto-cleane.webp";
 import logo from "../assets/logo-principal.webp";
 
 // ✅ Cole aqui o link do seu produto (Hotmart, Kiwify, etc.)
-const LINK_COMPRA = "https://seu-link-aqui.com";
+const LINK_COMPRA = "https://metodocev.cleanefontenele.com/product/1";
 
 export default function Hero() {
   return (
@@ -115,7 +115,7 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Botão com glow */}
+            {/* Botão dourado com glow */}
             <div style={{ position: "relative", borderRadius: "10px" }}>
               <div
                 style={{
@@ -123,7 +123,7 @@ export default function Hero() {
                   inset: "-3px",
                   borderRadius: "13px",
                   background: "transparent",
-                  boxShadow: "0 0 16px 3px rgba(37,99,235,0.7), 0 0 40px 6px rgba(37,99,235,0.3)",
+                  boxShadow: "0 0 16px 3px rgba(201,168,76,0.55), 0 0 40px 6px rgba(201,168,76,0.2)",
                   pointerEvents: "none",
                 }}
               />
@@ -137,13 +137,14 @@ export default function Hero() {
                   width: "100%",
                   textAlign: "center",
                   padding: "18px 24px",
-                  background: "linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #1e40af 100%)",
-                  color: "#fff",
+                  background: "linear-gradient(135deg, #a07828 0%, #c9a84c 40%, #e8c96a 60%, #c9a84c 80%, #a07828 100%)",
+                  color: "#1a1208",
                   borderRadius: "10px",
                   fontSize: "0.85rem",
+                  fontWeight: "700",
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  border: "1px solid rgba(147,197,253,0.35)",
+                  border: "1px solid rgba(255,220,120,0.5)",
                   overflow: "hidden",
                   textDecoration: "none",
                 }}
@@ -153,7 +154,7 @@ export default function Hero() {
                     position: "absolute",
                     inset: 0,
                     borderRadius: "10px",
-                    background: "linear-gradient(105deg, transparent 25%, rgba(255,255,255,0.18) 50%, transparent 75%)",
+                    background: "linear-gradient(105deg, transparent 25%, rgba(255,255,255,0.28) 50%, transparent 75%)",
                     backgroundSize: "200% 100%",
                     animation: "btnShine 2.8s linear infinite",
                     pointerEvents: "none",
@@ -173,12 +174,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator — oculto no mobile */}
-      <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 z-10">
-        <span className="text-gold/40 text-xs tracking-widest2 uppercase">Descer</span>
-        <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent relative overflow-hidden">
-          <div className="scroll-dot absolute top-0 left-0 right-0 h-3 bg-gold/70" />
-        </div>
-      </div>
+      
 
       <style>{`
         @keyframes btnShine {
