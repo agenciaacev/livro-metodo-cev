@@ -127,7 +127,7 @@ export default function FAQ() {
             Ainda com dúvidas? Fale direto com a gente.
           </p>
           <a
-            href="https://wa.me/5585999999999"
+            href="https://wa.me/5585986969403?text=Olá%2C%20vim%20pelo%20site%20do%20Método%20CEV%20e%20gostaria%20de%20tirar%20uma%20dúvida!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-xs tracking-widest2 uppercase px-8 py-4 transition-all duration-300"
