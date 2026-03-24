@@ -1,5 +1,4 @@
-# Método CEV em Movimento — Clone
-
+# Método CEV em Movimento 
 Clone da landing page do evento **Método CEV em Movimento** de Cleane Fontenele.
 
 ## Stack
