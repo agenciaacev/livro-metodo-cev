@@ -2,12 +2,12 @@ const cards = [
   {
     number: '01',
     title: 'Leitura rápida e prática',
-    desc: 'Cada página foi construída para gerar ação imediata. Sem enrolação, sem teoria vazia — só o que você aplica hoje e vê resultado ainda esta semana.',
+    desc: 'Cada página foi construída para gerar ação imediata. Sem enrolação, sem teoria vazia só o que você aplica hoje e vê resultado ainda esta semana.',
   },
   {
     number: '02',
     title: 'Método aplicado globalmente',
-    desc: 'Validado em 7 continentes com profissionais reais. O que você vai aprender não é hipótese — é o que funciona no mercado digital de verdade.',
+    desc: 'Validado em 7 continentes com profissionais reais. O que você vai aprender não é hipótese é o que funciona no mercado digital de verdade.',
   },
   {
     number: '03',
@@ -59,7 +59,7 @@ export default function About() {
             </p>
 
             <p
-              className="text-5xl md:text-6xl leading-tight italic"
+              className="text-5xl md:text-6xl leading-tight"
               style={{ color: '#c9a84c' }}
             >
               É método.
@@ -69,7 +69,7 @@ export default function About() {
               O Método CEV une os 3 pilares que ninguém te conta juntos:{' '}
               <span className="text-cream">Conteúdo</span> que atrai,{' '}
               <span className="text-cream">Estratégia</span> que posiciona e{' '}
-              <span className="text-cream">Vendas</span> que convertem — de forma
+              <span className="text-cream">Vendas</span> que convertem de forma
               simples, direta e replicável.
             </p>
 
@@ -88,7 +88,7 @@ export default function About() {
                 "O problema não é você. É que ninguém te ensinou o método certo."
               </p>
               <p className="text-gold text-xs tracking-widest2 uppercase mt-3">
-                — Cleane Fontenele
+                 Cleane Fontenele
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function About() {
             {cards.map((card, i) => (
               <div
                 key={i}
-                className="relative group overflow-hidden"
+                className="relative group overflow-hidden rounded-xl"
                 data-aos="fade-left"
                 data-aos-delay={100 + i * 120}
               >
@@ -131,7 +131,7 @@ export default function About() {
                 />
 
                 <div
-                  className="relative pl-7 pr-6 py-6 flex gap-5 items-start"
+                  className="relative pl-7 pr-6 py-6 flex gap-5 items-start rounded-xl"
                   style={{ background: 'rgba(201,168,76,0.05)', border: '1px solid rgba(201,168,76,0.18)' }}
                 >
                   {/* Número */}

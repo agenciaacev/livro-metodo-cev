@@ -6,7 +6,7 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = 'Método CEV | Conteúdo, Estratégia e Vendas — Cleane Fontenele',
+  title = 'Livro Método CEV — Cleane Fontenele',
   description = 'O método usado em 7 continentes para transformar redes sociais em máquina de vendas. Aprenda a unir Conteúdo, Estratégia e Vendas para atrair clientes todos os dias — sem depender de sorte ou só de indicações.',
 }: SEOProps) {
   const url = 'https://metodocev.cleanefontenele.com'
