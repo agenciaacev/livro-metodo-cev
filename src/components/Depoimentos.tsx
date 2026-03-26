@@ -1,8 +1,8 @@
 const depoimentos = [
   { name: 'Mariana Sousa',  role: 'Empreendedora digital',    initials: 'MS', color: '#1a73e8', stars: 5, tag: 'E-book',       text: 'Antes eu postava todo dia e vendia uma vez por mês. Depois do Método CEV entendi o que estava errado. Em 3 semanas fechei 4 contratos só pelo Instagram.' },
-  { name: 'Rafael Andrade', role: 'Consultor comercial',       initials: 'RA', color: '#e53935', stars: 5, tag: 'Livro Físico', text: 'Conteúdo sem estratégia é só barulho — aprendi isso na página 12. A Cleane te mostra exatamente onde você está errando. Em seis meses minha carteira triplicou.' },
-  { name: 'Fernanda Lima',  role: 'Especialista em vendas',    initials: 'FL', color: '#43a047', stars: 5, tag: 'Livro Físico', text: 'O livro físico ficou cheio de marcações. Não é teoria vazia — cada capítulo tem algo que você aplica no mesmo dia. Em 30 dias meu posicionamento mudou completamente.' },
-  { name: 'Camila Torres',  role: 'Criadora de conteúdo',      initials: 'CT', color: '#fb8c00', stars: 5, tag: 'E-book',       text: 'Eu achei que já sabia tudo sobre conteúdo. O CEV me mostrou que eu sabia fazer — mas não sabia vender. Essa diferença vale muito mais do que os R$ 37 que paguei.' },
+  { name: 'Rafael Andrade', role: 'Consultor comercial',       initials: 'RA', color: '#e53935', stars: 5, tag: 'Livro Físico', text: 'Conteúdo sem estratégia é só barulho aprendi isso na página 12. A Cleane te mostra exatamente onde você está errando. Em seis meses minha carteira triplicou.' },
+  { name: 'Fernanda Lima',  role: 'Especialista em vendas',    initials: 'FL', color: '#43a047', stars: 5, tag: 'Livro Físico', text: 'O livro físico ficou cheio de marcações. Não é teoria vazia cada capítulo tem algo que você aplica no mesmo dia. Em 30 dias meu posicionamento mudou completamente.' },
+  { name: 'Camila Torres',  role: 'Criadora de conteúdo',      initials: 'CT', color: '#fb8c00', stars: 5, tag: 'E-book',       text: 'Eu achei que já sabia tudo sobre conteúdo. O CEV me mostrou que eu sabia fazer mas não sabia vender. Essa diferença vale muito mais do que os R$ 37 que paguei.' },
   { name: 'Bruno Melo',     role: 'Coach de negócios',         initials: 'BM', color: '#8e24aa', stars: 5, tag: 'E-book',       text: 'Li o e-book em uma tarde e na semana seguinte apliquei a estrutura de vendas do capítulo 5. A melhor semana de fechamentos do meu negócio em dois anos.' },
   { name: 'Patrícia Rocha', role: 'Gestora de tráfego',        initials: 'PR', color: '#00897b', stars: 5, tag: 'Livro Físico', text: 'O livro chegou em 4 dias com frete grátis e a qualidade me surpreendeu. Mas o que mais surpreendeu foi o conteúdo. Recomendo para qualquer profissional do digital.' },
   { name: 'Lucas Ferreira', role: 'Produtor de conteúdo',      initials: 'LF', color: '#d81b60', stars: 5, tag: 'E-book',       text: 'Comprei o e-book sem muita expectativa e fui surpreendido. A clareza com que a Cleane explica o pilar de estratégia me fez repensar tudo que eu fazia. Vale cada centavo.' },
@@ -124,7 +124,7 @@ export default function Depoimentos() {
 
         <div data-aos="fade-up" data-aos-delay="80" className="mb-14">
           <p className="text-muted text-lg leading-relaxed max-w-2xl">
-            Cleane Fontenele não vende teoria. Ela vende o que já funcionou — para empreendedores,
+            Cleane Fontenele não vende teoria. Ela vende o que já funcionou para empreendedores,
             profissionais e criadores que travavam no digital e hoje faturam com consistência.
           </p>
         </div>
@@ -142,8 +142,8 @@ export default function Depoimentos() {
             { num: '100%',    label: 'garantia de devolução' },
           ].map((s, i) => (
             <div key={i} className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl tracking-wide" style={{ color: '#c9a84c' }}>{s.num}</span>
-              <span className="text-muted text-xs tracking-widest2 uppercase mt-1">{s.label}</span>
+              <span className="text-4xl md:text-4xl tracking-wide" style={{ color: '#c9a84c' }}>{s.num}</span>
+              <span className="text-black text-[14px] tracking-widest2 uppercase mt-1">{s.label}</span>
             </div>
           ))}
         </div>

@@ -3,11 +3,11 @@ import { useState } from 'react'
 const faqs = [
   {
     q: 'Isso funciona para qualquer nicho?',
-    a: 'Sim. O Método CEV foi desenvolvido para ser aplicável em qualquer segmento — sejam serviços, produtos físicos, infoprodutos ou negócios locais. O que muda é o conteúdo. A estrutura de conteúdo, estratégia e vendas é universal.',
+    a: 'Sim. O Método CEV foi desenvolvido para ser aplicável em qualquer segmento sejam serviços, produtos físicos, infoprodutos ou negócios locais. O que muda é o conteúdo. A estrutura de conteúdo, estratégia e vendas é universal.',
   },
   {
     q: 'Preciso ter muitos seguidores para aplicar?',
-    a: 'Não. O método foi criado justamente para quem ainda está construindo presença digital. Você não precisa de audiência grande — precisa de estratégia certa. O CEV te ensina a construir do zero com consistência.',
+    a: 'Não. O método foi criado justamente para quem ainda está construindo presença digital. Você não precisa de audiência grande precisa de estratégia certa. O CEV te ensina a construir do zero com consistência.',
   },
   {
     q: 'O e-book é digital? Como vou receber?',
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Vale mesmo a pena investir R$ 37 nisso?',
-    a: 'Uma única venda a mais já paga o método inteiro — e sobra. O que você vai aprender aqui tem o potencial de mudar completamente a forma como você se posiciona e converte no digital. A pergunta real é: quanto está custando não ter esse método?',
+    a: 'Uma única venda a mais já paga o método inteiro e sobra. O que você vai aprender aqui tem o potencial de mudar completamente a forma como você se posiciona e converte no digital. A pergunta real é: quanto está custando não ter esse método?',
   },
   {
     q: 'E se eu comprar e não gostar?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Qual a diferença entre o e-book e o livro físico?',
-    a: 'O e-book traz os fundamentos e os 7 pilares do Método CEV — ideal para quem quer começar rápido e entender a base. O livro físico aprofunda a jornada com a história e diferenciais do método, e é perfeito para quem quer ter o conteúdo sempre à mão de forma tangível.',
+    a: 'O e-book traz os fundamentos e os 7 pilares do Método CEV ideal para quem quer começar rápido e entender a base. O livro físico aprofunda a jornada com a história e diferenciais do método, e é perfeito para quem quer ter o conteúdo sempre à mão de forma tangível.',
   },
 ]
 
