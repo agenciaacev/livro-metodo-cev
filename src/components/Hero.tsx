@@ -1,10 +1,31 @@
+import { useEffect } from "react";
 import imgCleane from "../assets/foto-cleane.webp";
 import logo from "../assets/logo-principal.webp";
 
 // ✅ Cole aqui o link do seu produto (Hotmart, Kiwify, etc.)
 const LINK_COMPRA = "https://metodocev.cleanefontenele.com/product/1";
 
+declare global {
+  interface Window {
+    fbq: (...args: unknown[]) => void;
+  }
+}
+
 export default function Hero() {
+  // 👁️ Rastreia visualização da página
+  useEffect(() => {
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "ViewContent");
+    }
+  }, []);
+
+  // 🛒 Rastreia clique no botão de compra
+  function handleCompraClick() {
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "InitiateCheckout");
+    }
+  }
+
   return (
     <section
       id="inicio"
@@ -56,20 +77,23 @@ export default function Hero() {
             src={imgCleane}
             alt="Cleane Fontenele"
             className="w-full object-cover object-top"
-            style={{ minHeight: '95vh', maxHeight: '95vh', objectFit: 'cover', objectPosition: 'top' }}
+            style={{ minHeight: "95vh", maxHeight: "95vh", objectFit: "cover", objectPosition: "top" }}
           />
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 45%, rgba(15,10,4,0.35) 62%, rgba(15,10,4,0.88) 78%, #1a1208 92%)',
+              background: "linear-gradient(to bottom, transparent 0%, transparent 45%, rgba(15,10,4,0.35) 62%, rgba(15,10,4,0.88) 78%, #1a1208 92%)",
             }}
           />
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 z-10">
             <img src={logo} alt="Logo" className="h-8 w-auto mb-4" />
-            <h1 className="text-cream font-bold text-4xl text tracking-wide mb-3 text-center" style={{ lineHeight: '1.1', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.6)' }}>
-              <span style={{ color: '#c9a84c', fontWeight: 700 }}>O método usado em 7 continentes</span> para transformar redes sociais em máquina de vendas.
+            <h1
+              className="text-cream font-bold text-4xl tracking-wide mb-3 text-center"
+              style={{ lineHeight: "1.1", textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.6)" }}
+            >
+              <span style={{ color: "#c9a84c", fontWeight: 700 }}>O método usado em 7 continentes</span> para transformar redes sociais em máquina de vendas.
             </h1>
-            <p className="text-cream/80 text-lg mb-2 text-center" style={{ lineHeight: '1.3' }}>
+            <p className="text-cream/80 text-lg mb-2 text-center" style={{ lineHeight: "1.3" }}>
               Aprenda a unir Conteúdo, Estratégia e Vendas para atrair clientes
               todos os dias sem depender de sorte ou só de indicações.
             </p>
@@ -83,13 +107,16 @@ export default function Hero() {
           <img src={logo} alt="Logo" className="hidden md:block h-12 w-auto mb-8" />
 
           <div className="hidden md:block" data-aos="fade-up" data-aos-duration="1600" data-aos-delay="80">
-            <h1 className="text-cream font-semibold text-4xl md:text-4xl lg:text-5xl tracking-wide mb-5" style={{ lineHeight: '1.1', textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.6)' }}>
-              <span style={{ color: '#c9a84c', fontWeight: 700 }}>O método usado em 7 continentes</span> para transformar redes sociais em máquina de vendas.
+            <h1
+              className="text-cream font-semibold text-4xl md:text-4xl lg:text-5xl tracking-wide mb-5"
+              style={{ lineHeight: "1.1", textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.6)" }}
+            >
+              <span style={{ color: "#c9a84c", fontWeight: 700 }}>O método usado em 7 continentes</span> para transformar redes sociais em máquina de vendas.
             </h1>
           </div>
 
           <div className="hidden md:block" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="160">
-            <p className="text-cream text-xl md:text-2xl mb-10" style={{ lineHeight: '1.3' }}>
+            <p className="text-cream text-xl md:text-2xl mb-10" style={{ lineHeight: "1.3" }}>
               Aprenda a unir Conteúdo, Estratégia e Vendas para atrair clientes
               todos os dias sem depender de sorte ou só de indicações.
             </p>
@@ -131,6 +158,7 @@ export default function Hero() {
                 href={LINK_COMPRA}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleCompraClick}
                 style={{
                   display: "block",
                   position: "relative",
@@ -172,9 +200,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator — oculto no mobile */}
-      
 
       <style>{`
         @keyframes btnShine {
