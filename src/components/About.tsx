@@ -1,7 +1,7 @@
-import cardBg1 from '../assets/leitura-rapida.png'
-import cardBg2 from '../assets/metodo-global.png'
-import cardBg3 from '../assets/garantia-de-insight.png'
-import cardBgCenter from '../assets/cara-pensando.jpeg'
+import cardBg1 from '../assets/leitura-rapida.webp'
+import cardBg2 from '../assets/metodo-global.webp'
+import cardBg3 from '../assets/garantia-de-insight.webp'
+import cardBgCenter from '../assets/cara-pensando.webp'
 
 const cards = [
   {
