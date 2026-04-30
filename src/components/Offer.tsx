@@ -1,9 +1,23 @@
+import React from "react"
+
 // ✅ Cole aqui os links dos seus produtos
 const LINK_EBOOK   = "https://metodocev.cleanefontenele.com/product/1"
 const LINK_LIVRO   = "https://metodocev.cleanefontenele.com/product/2"
 
 // ✅ Substitua pelo caminho da imagem da capa do livro
 import capaLivro from "../assets/livro.webp"
+
+declare global {
+  interface Window {
+    fbq: (...args: unknown[]) => void
+  }
+}
+
+function trackEvent(event: string, params?: Record<string, unknown>) {
+  if (typeof window.fbq === "function") {
+    window.fbq("track", event, params ?? {})
+  }
+}
 
 const BtnShine = () => (
   <span
@@ -114,6 +128,9 @@ export default function Offer() {
                   href={LINK_EBOOK}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent("InitiateCheckout", { content_name: "E-book Método CEV", value: 37, currency: "BRL" })
+                  }
                   style={{
                     display: 'block',
                     position: 'relative',
@@ -172,6 +189,9 @@ export default function Offer() {
                   href={LINK_LIVRO}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent("InitiateCheckout", { content_name: "Livro Físico Método CEV", value: 157, currency: "BRL" })
+                  }
                   style={{
                     display: 'block',
                     position: 'relative',
